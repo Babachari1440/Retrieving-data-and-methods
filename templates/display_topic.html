@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying topic data</title>
+</head>
+<style>
+    h1
+    {
+        color:darkkhaki;
+    }
+    body
+    {
+        background-color: rgb(255, 0, 149);
+    }
+    
+    td
+    {
+        color:cyan;
+    }
+    tr
+    {
+        color:crimson;
+    }  
+</style>  
+<body>
+
+    <center>
+<h1>Displaying data of TOPIC MODEL</h1>
+<table border="2px">
+    <tr><th>topic_name</th></tr>
+
+
+<!--
+this will give particular data from table in django's get method
+
+
+    <td>{{topics}}</td>
+
+-->
+    {% for topic in topics %}
+    <tr>
+    <td>{{topic}}</td>
+
+    </tr>
+{% endfor %}
+
+</table>
+    </center>
+</body>
+</html>

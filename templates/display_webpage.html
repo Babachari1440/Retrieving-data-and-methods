@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying webpage data</title>
+</head>
+<style>
+    h1
+    {
+        color: rgb(115, 184, 185);
+    }
+    body
+    {
+        background-color: rgb(68, 0, 255);
+    }
+    
+    td
+    {
+        color: rgb(20, 255, 98);
+    }
+    tr
+    {
+        color: rgb(255, 72, 0);
+    }
+    </style>
+    
+<body>
+    <center>
+<h1>Displaying data of WEBPAGE MODEL</h1>
+<table border="2px">
+    <tr>
+        <th>topic_name</th>
+        <th>name</th>
+        <th>url</th>
+    
+    </tr>
+{% for webpage in webpages %}
+<tr>
+<td>{{webpage.topic_name}}</td>
+<td>{{webpage.name}}</td>
+<td>{{webpage.url}}</td>
+</tr>
+{% endfor %}
+
+
+
+</table>
+    </center>
+</body>
+</html>

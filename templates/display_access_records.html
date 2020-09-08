@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying access_records data</title>
+</head>
+
+<style>
+h1
+{
+    color: darkturquoise;
+}
+body
+{
+    background-color: gold;
+}
+
+td
+{
+    color: deeppink;
+}
+tr
+{
+    color: fuchsia;
+}
+</style>
+
+
+<body>
+    <center>
+<h1>Displaying data of ACCESS_RECORDS MODEL</h1>
+<table border="2px">
+    <tr>
+        
+        <th>name</th>
+        <th>date</th>
+    
+    </tr>
+{% for access_records in access_records %}
+<tr>
+
+<td>{{access_records.name}}</td>
+<td>{{access_records.date}}</td>
+</tr>
+{% endfor %}
+
+
+
+</table>
+    </center>
+</body>
+</html>
